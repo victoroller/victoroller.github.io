@@ -2,24 +2,38 @@
 <html lang="en">
 
 <head>
-    <style type="text/css">
-        div.cuadrado {
-            width: 150px;
-            height: 40px;
-            border: 1px solid #dddddd;
-            margin: 5px;
-        }
-.cuadrado1{
-            width: 600px;
-            height: 600px;
-            border: 1px solid #dddddd;
-           
+    <style>
+    .pagina2{
+        width: 100vw;
+	background-color: rgb(87, 80, 80);
+	color: rgb(30, 30, 146);
+	display: grid;
+	grid-template-areas: 	'header header'
+							'fotografia datospersonales'
+							'fotografia perfil'
+							'fotografia estudios';
+	grid-template-columns: 25% 75%;
+	grid-template-rows: 10% 25% 25% 40%;
+	position: absolute;
+	/*opacity: .9 ;*/
+	height: 100vh;
+	transition: .5s all ease-in-out;
+	left:0%;
+	pointer-events: none;
 }
-        div.textogrande {
-            font-family: verdana, arial, helvetica;
-            font-weight: bold;
-            font-size: 40pt;
-        }
+    .estudios{
+        background-color: bisque;
+        grid-area: estudios;
+        column-count: 2;
+        column-gap: 60px;
+    }
+    .estudios_titulo{
+        margin: 20px 20px 200px 20px;
+    }
+    .estudios_tabla{
+        font-size: 25px;
+        font-weight: bold;
+    }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,55 +42,32 @@
 </head>
 
 <body>
-    <h1>Colores RGBA con CSS 3</h1>
-
-    <h2>Ejemplo de capas con fondo azul y varias transparencias</h2>
-    <div class="cuadrado" style="background-color: rgba(0, 0, 255, 0.1)"></div>
-    <div class="cuadrado" style="background-color: rgba(0, 0, 255, 0.4)"></div>
-    <div class="cuadrado" style="background-color: rgba(0, 0, 255, 0.7)"></div>
-    <div class="cuadrado" style="background-color: rgba(0, 0, 255, 1)"></div>
-
-    <h2>
-        Ejemplo de capas con fondo verde y varias transparencias, sobre una capa
-        con fondo amarillo
-    </h2>
-    <div style="background-color: #ff3; padding: 20px">
-        <div class="cuadrado" style="background-color: rgba(0, 255, 0, 0.1)"></div>
-        <div class="cuadrado" style="background-color: rgba(0, 255, 0, 0.4)"></div>
-        <div class="cuadrado" style="background-color: rgba(0, 255, 0, 0.7)"></div>
-        <div class="cuadrado" style="background-color: rgba(0, 255, 0, 1)"></div>
-    </div>
-
-    <h2>
-        Ejemplo de capas con fondo naranja y varias transparencias, sobre una capa
-        con una imagen de fondo
-    </h2>
-    <div style="
-              background-image: url(./activos/img/condiploma.jpg);
-                          ">
-        <div class="cuadrado1" style="background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);"></div>
-        <!--<div class="cuadrado" style="background-color: rgba(255, 125, 0, 0.4)"></div>
-        <div class="cuadrado" style="background-color: rgba(255, 125, 0, 0.7)"></div>
-        <div class="cuadrado" style="background-color: rgba(255, 125, 0, 1)"></div>-->
-    </div>
-
-    <h2>
-        Ejemplo de texto de color rojo y varias transparencias, sobre una capa con
-        una imagen de fondo
-    </h2>
-    <div style="
-              background-image: url(./activos/img/conanteojos1.jpg);
-              padding: 10px;
-            ">
-        <div class="textogrande" style="color: rgba(200, 0, 0, 0.3)">
-            Este texto está para que se vea que puede ser también medio transparente
+<div class="pagina2">
+    <section class="estudios">
+        <div class="estudios_titulo">
+            <i class="bx bxs-graduation"></i>
+            <h2>Formacion Academica y Experiencia</h2>
         </div>
-        <div class="textogrande" style="color: rgba(200, 0, 0, 0.7)">
-            Este texto está para que se vea que puede ser también medio transparente
-        </div>
-    </div>
+        <table class="estudios_tabla">
+            <tr class="fila_tabla">
+                <td class="estudios_ano">2011 - act.</td>
+                <td>Poder Judicial Sgo Estero</td>
+            </tr>
+            <tr class="fila_tabla">
+                <td class="estudios_ano">2000 - 2011</td>
+                <td>Ingenieria en Informatica</td>
+            </tr>
+            <tr class="fila_tabla">
+                <td class="estudios_ano">2005 - 2010</td>
+                <td>Profesor Secundario</td>
+            </tr>
+            <tr class="fila_tabla">
+                <td class="estudios_ano"> 1995 - 2000</td>
+                <td>Programador Universitario</td>
+            </tr>
+        </table>
+    </section>
+</div>
 </body>
 
 </html>

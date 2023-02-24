@@ -34,8 +34,9 @@ ul {
 			grid-template-columns: auto auto auto;
 			position: relative;
 			width: 100vw;
-			height: 100vh
-			/*overflow: hidden;*/
+			height: 100vh;
+			overflow: hidden;
+			
 		}
 
 .pagina1, .pagina2
@@ -46,8 +47,8 @@ ul {
 
 
 .pagina1{
-	background-color: rgb(231, 151, 114);
-	border: 1px solid black;
+	background: no-repeat center url("../img/LogoVictor.png");
+	background-size: contain;
 	display: grid;
 	grid-template-columns: 25% 75%;
 	height: 100vh;
@@ -56,19 +57,19 @@ ul {
 }
 .pagina2{
 	background-color: black;
-	color: rgb(202, 202, 207);
+	color: rgb(240, 230, 238);
 	display: grid;
 	grid-template-areas: 	'header header'
 							'fotografia datospersonales'
 							'fotografia perfil'
 							'fotografia estudios';
 	grid-template-columns: 25% 75%;
-	grid-template-rows: 10% 25% 25% 40%;
+	grid-template-rows: 10% 30% 30% 30%;
 	position: absolute;
 	/*opacity: .9 ;*/
 	height: 100vh;
 	transition: .5s all ease-in-out;
-	left: 100%;
+	left:100%;
 	pointer-events: none;
 }
 
@@ -134,7 +135,8 @@ ul {
 	height:auto
 }
 .seccion_titulo{
-	font-size: 25px;
+	color: whitesmoke;
+	font-size: 30px;
 	margin-bottom: 1.5rem;
 }
 
@@ -150,7 +152,8 @@ ul {
 	background-color: rgb(219, 224, 233);
 	padding: 0.75rem;
 	border-radius: 10px;
-
+	margin-top: 20px;
+	
 }
 .habilidad_texto{
 	font-size: 20px;
@@ -158,6 +161,7 @@ ul {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: .15rem;
+	margin-top: 30px;
 }
 .habilidad_barra-ext{
 	width: 100%;
@@ -232,7 +236,7 @@ ul {
 
 .rrss{
 	position: fixed;
-	bottom: 1rem;
+	bottom: 0rem;
 	left:50%;
 	transform: translateX(-50%);
 	display:flex;
@@ -242,7 +246,7 @@ ul {
 	
 }
 .rrss_texto{
-	
+	color: whitesmoke;
 	border-radius: 10px;
 }
 .rrss_texto p{
@@ -250,17 +254,17 @@ ul {
 	font-size: 20px;
 }
 .rrss_enlaces{
-	background-color: rgba(75, 4, 4, 0.9);
+	background-color: rgba(75, 4, 4, 1);
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	gap: 200px;
-	padding: 10px;
+	gap: 172px;
 	width: 100%;
 	border-radius: 30px;
 
 }
 .rrss_enlaces a{
+	margin: 10px;
 	color: antiquewhite;
 	font-size: 2.5rem;
 	transition: .3s all ease-in-out;
@@ -288,8 +292,10 @@ ul {
 }
 
 .header_logo{
-	width: 100px;
-	height: 100px;
+	position: relative;
+	top: 35px;
+	width: 150px;
+	height: 150px;
 	z-index: 2;
 	
 }
@@ -326,9 +332,6 @@ ul {
 .datospersonales_nombre{
 	grid-column: 1 /4;
 	margin-bottom: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
 }
 .datospersonales_nombre h1{
 	font-size: 40px;
@@ -340,6 +343,13 @@ ul {
 	font-size: 30px;
 	text-transform: uppercase;
 }	
+.linea {
+	border-top: 1px solid rgb(248, 245, 245);
+	height: 2px;
+	width: 100%;
+	padding: 0;
+	margin: 20px auto 0 auto;
+  }
 .datospersonales_ul{
 	display: flex;
 }
@@ -354,9 +364,12 @@ font-size: 30px;
 align-items: center;
 margin-right: 20px;
 }
+
 .perfil{
 	grid-area: perfil;
-}
+	margin: 20px 20px 20px 20px; 
+	}
+
 .perfil_titulo{
 	display: flex;
 	gap: 15px;
@@ -373,25 +386,27 @@ margin-right: 20px;
 }
 
 .estudios{
-	display: flex;
-	gap: 340px;
 	grid-area: estudios;
+	column-count: 2;
+	column-rule: 3px solid white;
 }
 .estudios_titulo{
 	display: flex;
 	gap:15px;
 	padding: 15px;
+	margin:20px 20px 200px 20px;
 }
 .estudios_titulo i{
 	font-size: 30px;
 	font-weight: bold;
 }
-.estudios_tabla{
-	border-color: darkslategray 1px solid;	
+table{
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 20px;
+	margin-left: 30px;
 }
-.fila_tabla{
-	font-size: 16px;
-	}
 
 .estudios_ano{
 	font-weight: bold;
