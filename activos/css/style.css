@@ -331,7 +331,7 @@ ul {
 }
 .datospersonales_nombre{
 	grid-column: 1 /4;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .datospersonales_nombre h1{
 	font-size: 40px;
